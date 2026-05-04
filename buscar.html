@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FansVoley | Inicio</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="buscar.css">
+  <link rel="stylesheet" href="subir.css">
+
+  <script src="header.js" defer></script>
+  <script src="accesibilidad.js" defer></script>
+  <script src="buscar.js" defer></script>
+  <script src="./carrito/productos.js" defer></script>
+  <script src="./carrito/tarjeta.js" defer></script>
+  <script src="./carrito/buscar.js" defer></script>
+  <script src="./carrito/carrito.js" defer></script>
+  <script src="./carrito/carrito-page.js" defer></script>
+  <script src="subir.js" defer></script> 
+
+</head>
+
+<body id="top">
+
+  <!-- Enlace de accesibilidad -->
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+    <!-- Boton subir-->
+  <button id="btnSubir" title="Subir arriba">↑</button>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="d-flex align-items-center text-decoration-none">
+        <img class="logo me-2" src="img/LogoNaranja.png" alt="Logo de FansVoley" width="40" height="38">
+        <span class="logo-text">FANSVOLEY</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        ☰
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="buscar.html">Búsqueda</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+        <div class="dropdown carrito-dropdown">
+          <button id="btn-carrito"
+                  class="btn btn-outline-primary dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false">
+
+            <i class="bi bi-cart-fill text-white"></i>
+            Carrito
+            <span id="contador-carrito" class="badge bg-primary">0</span>
+          </button>
+
+          <div class="dropdown-menu dropdown-menu-end p-3 carrito-menu">
+            <h2 class="h6">Resumen del carrito</h2>
+
+            <div id="resumen-carrito">
+              <p class="mb-0">El carrito está vacío.</p>
+            </div>
+
+            <hr>
+
+            <p class="d-flex justify-content-between mb-2">
+              <strong>Total:</strong>
+              <strong id="total-resumen">0 €</strong>
+            </p>
+
+            <a href="carrito.html" class="btn btn-primary w-100">
+              Ver carrito
+            </a>
+          </div>
+        </div>
+    </div>
+  </header>
+
+ <main id="contenido-principal" class="container py-5" tabindex="-1">
+    <section>
+        <h1>Búsqueda</h1>
+
+        <form class="row g-3 mb-4">
+        <div class="col-md-9">
+            <label for="busqueda" class="visually-hidden">Buscar contenido</label>
+            <input type="search" id="busqueda" class="form-control" placeholder="Buscar equipos, clubes o competiciones">
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-primary w-100" type="submit">Buscar</button>
+        </div>
+        </form>
+
+        <div class="tabs">
+          <button class="tab active" onclick="mostrarTab('tab1', this)">Entradas</button>
+          <button class="tab" onclick="mostrarTab('tab2', this)">Abonos</button>
+          <button class="tab" onclick="mostrarTab('tab3', this)">Equipamiento</button>
+        </div>
+
+        <div id="tab1" class="contenido-tab active">
+          <p>Compra de entradas</p>
+          <div class="row g-4" id="contenedor-entradas"></div>
+        </div>
+
+        <div id="tab2" class="contenido-tab">
+          <p>Compra de abonos</p>
+          <div class="row g-4" id="contenedor-abonos"></div>
+        </div>
+
+        <div id="tab3" class="contenido-tab">
+          <p>Compra de equipamiento</p>
+          <div class="row g-4" id="contenedor-equipamiento"></div>
+        </div>
+            </section>
+        </main>
+        
+
+  <footer class="container">
+    <div class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Inicio</a></li>
+        <li class="nav-item"><a href="producto.html" class="nav-link px-2 text-muted">Producto</a></li>
+        <li class="nav-item"><a href="buscar.html" class="nav-link px-2 text-muted">Búsqueda</a></li>
+        <li class="nav-item"><a href="contacto.html" class="nav-link px-2 text-muted">Contacto</a></li>
+      </ul>
+      <p class="text-center text-muted">&copy; 2026 FansVoley</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

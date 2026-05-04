@@ -1,0 +1,100 @@
+/* SITUACION DEL CONTENEDOR PRINCIPAL ARRIBA*/
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: blue;
+    color: white;
+}
+/* FLEX DEL CONTENEDOR PARA EL LOGO, TOOGLE Y MAIN-NAV*/
+.header-inner {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+/* TOOGLE*/
+.nav-toggle {
+    border: none;
+    background-color: #0d6efd;
+    color: white;
+    padding: 0.6rem 0.9rem;
+    border-radius: 8px;
+}
+/* CONTENEDOR DE LA LISTA POR DEFECTO DESACTIVADO PORQUE LUEGO CON JAVASCRIPT LO ACTIVAMOS EN MODO HORIZONTAL CUANDO PULSAMOS EL TOOGLE*/
+.main-nav {
+    display: none;
+    width: 100%;
+}
+/* CREO LA CLASE IS-OPEN QUE ACTIVARÉ CON JAVASCRIPT PASA A ACTIVADO CUANDO EL SE PULSA EL TOOGLE.*/
+.main-nav.is-open {
+    display: block;
+}
+/* FORMATO DE LA LISTA EN COLOMNA POR DEFECTO PORQUE LUEGO CON LA MEDIAQUERY LO PONEMOS EN FORMATO FILA*/
+.nav-list {
+    list-style: none;
+    margin: 1rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+/* ELEMENTOS DE LA LISTA*/
+.nav-list a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background-color: #0d6efd;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+    background-color: #4b5563;
+    outline: none;
+}
+
+/* APLICA ESTILOS SOLO CUANDO EL LA PANTALLA SUPERA LOS 768PX*/
+
+@media (min-width: 768px) {
+    .header-inner {
+        flex-wrap: nowrap;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .main-nav {
+        display: block;
+        width: auto;
+    }
+
+    .nav-list {
+        margin: 0;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .nav-list a {
+        background-color: transparent;
+        padding: 0.5rem 0.8rem;
+    }
+
+    .nav-list a:hover,
+    .nav-list a:focus {
+        background-color: #374151;
+    }
+}

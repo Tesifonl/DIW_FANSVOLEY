@@ -1,0 +1,36 @@
+.accordion {
+    display: grid;
+    gap: 1rem;
+}
+
+.accordion-item {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fafafa;
+}
+
+.accordion-header {
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    text-align: left;
+    background-color: #e5e7eb;
+    font-weight: bold;
+}
+
+.accordion-header:hover,
+.accordion-header:focus {
+    background-color: #d1d5db;
+    outline: none;
+}
+
+.accordion-content {
+    display: none;
+    padding: 1rem;
+    background-color: white;
+}
+
+.accordion-item.is-open .accordion-content {
+    display: block;
+}

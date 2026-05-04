@@ -1,0 +1,118 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.5;
+}
+
+/* Enlace para saltar navegación */
+.skip-link {
+  position: absolute;
+  top: -50px;
+  left: 1rem;
+  z-index: 9999;
+  background: #111;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Foco visible con tabulador */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid #ff7a00;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Transiciones */
+a,
+button,
+.card,
+.info-box,
+.nav-toggle {
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.85;
+}
+
+.btn:hover,
+.nav-toggle:hover {
+  transform: translateY(-2px);
+}
+
+.card-hover:hover,
+.info-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12);
+}
+
+/* Hero */
+.hero-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+.logo-text {
+  font-weight: 700;
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Para que el main pueda recibir el foco al usar skip-link */
+main:focus {
+  outline: none;
+}
+
+.panel-carrito {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 320px;
+  height: 100vh;
+  background: white;
+  box-shadow: -4px 0 12px rgba(0,0,0,0.2);
+  padding: 1.5rem;
+  z-index: 2000;
+  transition: right 0.3s ease;
+  overflow-y: auto;
+}
+
+.panel-carrito.abierto {
+  right: 0;
+}
+
+.resumen-carrito {
+  position: sticky;
+  top: 100px;
+}
+
+.carrito-menu {
+  width: 320px;
+  max-width: 90vw;
+}
+
+.carrito-menu img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+#btn-carrito {
+
+  color: white;
+  border: none;
+ 
+}

@@ -1,0 +1,19 @@
+#btnSubir {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999; /* siempre en primer plano */
+  
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  
+  display: none; /* oculto al inicio */
+}
+
+#btnSubir:hover {
+  background-color: #555;
+}

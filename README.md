@@ -21,3 +21,12 @@ La web permite navegar por diferentes secciones e interactuar con sus contenidos
 - Repositorio: 
 https://github.com/Tesifonl/DIW_FANSVOLEY.git
 
+- Web:
+https://tesifonl.github.io/DIW_FANSVOLEY
+
+- Enlace video en Drive
+https://drive.google.com/drive/folders/1qvrXHGYHCv5tAg1irlbqHnBSIg8UHn9B?usp=sharing
+
+
+
+
